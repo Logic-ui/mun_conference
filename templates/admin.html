@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Registered Delegates</h1>
+
+<a href="/admin/logout" class="btn secondary" style="float:right;">Logout</a>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>School</th>
+    <th>Committee</th>
+  </tr>
+
+  {% for r in data %}
+  <tr>
+    <td>{{ r.name }}</td>
+    <td>{{ r.email }}</td>
+    <td>{{ r.school }}</td>
+    <td>{{ r.committee }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title if title else "MUN Conference" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h2 class="logo">Global MUN 2025</h2>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/committees">Committees</a></li>
+      <li><a href="/registration">Register</a></li>
+      <li><a href="/schedule">Schedule</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li>
+      <a href="/admin/login" class="login-btn">Login</a>
+    </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+
+<footer>
+  <p>© 2025 Global MUN Conference</p>
+  <div class="socials">
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a>
+  </div>
+</footer>
+
+</body>
+</html>

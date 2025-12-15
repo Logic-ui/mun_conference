@@ -1,0 +1,281 @@
+/* --------------------
+   Global Styles
+--------------------- */
+:root {
+  --primary: #0b3c5d;
+  --secondary: #328cc1;
+  --accent: #f4d03f;
+  --light: #f5f7fa;
+  --dark: #1c1c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* --------------------
+   Navbar
+--------------------- */
+.navbar {
+  background: linear-gradient(90deg, var(--primary), #062a40);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+}
+
+/* --------------------
+   Hero Section
+--------------------- */
+.hero {
+  background: linear-gradient(
+      rgba(11, 60, 93, 0.85),
+      rgba(11, 60, 93, 0.85)
+    ),
+    url("/static/images/banner.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* --------------------
+   Buttons
+--------------------- */
+.btn {
+  background: var(--accent);
+  color: black;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: #2874a6;
+}
+
+/* --------------------
+   Sections
+--------------------- */
+section {
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2,
+section h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+/* --------------------
+   Info Cards
+--------------------- */
+.info {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.info p {
+  font-size: 16px;
+}
+
+/* --------------------
+   Committees
+--------------------- */
+.committee {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 6px solid var(--secondary);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+}
+
+.committee h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.committee ul {
+  padding-left: 20px;
+}
+
+/* --------------------
+   Forms
+--------------------- */
+form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+/* --------------------
+   Tables (Schedule)
+--------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+th {
+  background: var(--primary);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* --------------------
+   Footer
+--------------------- */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* --------------------
+   Responsive
+--------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .navbar li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+.login-btn {
+  background: #f4d03f;
+  color: black !important;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #e6c200;
+}
